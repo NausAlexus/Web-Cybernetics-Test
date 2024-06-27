@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* Контент */
+*{
+    margin: 0;
+}
+body{
+    overflow: hidden;
+}
+.content{
+    background-color: #EBF0FA;
+    max-height: 456px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50vh 40px 0 40px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+/* Правый блок */
+.img{
+    width: 910px;
+    height: 456px;
+    background-image: url(../img/backgrond-1920.png);
+    border-radius:  0 10px 10px 0;
+}
+
+/* Левый блок */
+.content-left{
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    margin-left: 72px;
+    margin-top: 102px;
+}
+.title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #1F4284;
+}
+.text{
+    max-width: 511px;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 18px;
+    color: #727272;
+}
+.btn{
+    width: 341px;
+    height: 68px;
+    border-radius: 60px;
+    border: none;
+    background-color: #244C98;
+    display: flex;
+    align-items: center;
+    margin-top: 36px;
+    cursor: pointer;
+}
+.btn-text{
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    margin-left: 24px;
+    transition: 0.3s;
+}
+.btn-img{
+    width: 44px;
+    height: 44px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 48px;
+}
+.btn-logo{
+    transition: 0.3s;
+}
+.btn:hover{
+    .btn-logo{
+        transform: scale(1.5);
+    }
+    .btn-text{
+        transform: scale(1.05);
+    }
+}
+
+
+
+
+/* Адаптация */
+/* Адаптируем под 1440px */
+@media screen and (max-width: 1440px){
+
+    .content-left{
+        margin-top: 105px;
+    }
+
+    .img{
+        width: 680px;
+        height: 456px;
+        background-image: url(../img/backgrond-1440.png);
+    }
+
+    .title{
+        font-size: 26px;
+    }
+
+}
+
+
+/* Адаптируем под 768px */
+@media screen and (max-width: 768px){
+
+    .content{
+        flex-direction: column;
+        max-height: 586px;
+        margin: 50vh 24px 0 24px;
+    }
+
+    .content-left{
+        margin-left: 24px;
+        margin-top: 24px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    .text{
+        max-width: 672px;
+        font-size: 15px;
+    }
+
+    .btn{
+        width: 261px;
+        height: 56px;
+        margin-top: 24px;
+    }
+
+    .btn-text{
+        font-size: 15px;
+        margin-left: 18px;
+    }
+
+    .btn-img{
+        width: 36px;
+        height: 36px;
+        margin-left: 19px;
+    }
+
+    .img{
+        margin-top: 24px;
+        height: 360px;
+        width: auto;
+        background-image: url(../img/backgrond-768.png);
+        border-radius:  0 0 10px 10px;
+    }
+
+}
+
+
+/* Адаптируем под 375px */
+@media screen and (max-width: 375px){
+
+    .content{
+        max-height: 482px;
+    }
+
+    .title{
+        font-size: 17px;
+    }
+
+    .text{
+        max-width: 279px;
+        font-size: 13px;
+        margin-top: 14px;
+    }
+
+    .btn{
+        width: auto;
+        height: 56px;
+        margin-right: 24px;
+    }
+
+    .btn-img{
+        margin-left: 37px;
+    }
+
+    .img{
+        margin-top: 18px;
+        height: 220px;
+        background-image: url(../img/backgrond-375.png);
+    }
+
+}
+
+
+
+
+/* Форма */
+.login-form{
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 500px;
+    height: 575px;
+    background-color: #F0F4FC;
+    margin-top: 50vh;
+    margin-left: 50vw;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.btn-close{
+    width: 52px;
+    height: 52px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 24px 24px 0 424px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-close-img{
+    transition: 0.3s;
+}
+.btn-close:hover{
+    .btn-close-img{
+        transform: scale(1.3);
+    }
+}
+.form-flex{
+    display: flex;
+    justify-content: center;
+}
+.form-container{
+    margin-top: 4px;
+    width: 452px;
+    height: 471px;
+    background-color: #F0F4FC;
+}
+.title-form{
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 600;
+    color: #323232;
+}
+.email::-webkit-input-placeholder, .password::-webkit-input-placeholder {
+    color: #1F4284; }
+.email{
+    padding: 0;
+    margin-top: 18px;
+    width: calc(100% - 24px);
+    height: 73px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    padding-left: 24px;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #D7E2F6;
+}
+.password{
+    padding: 0;
+    margin-top: 4px;
+    width: calc(100% - 24px);
+    height: 73px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    padding-left: 24px;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #D7E2F6;
+}
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    margin-top: 27px;
+    margin-left: 3px;
+}
+
+/* Кастомизируем чекбокс */
+input[type ="checkbox"] {
+    display: none;
+}
+label:before {
+    content: " ";
+    cursor: pointer;
+    color: #323232;
+    display: inline-block;
+    font: 30px/15px Indie Flower;
+    font-weight: 900;
+    margin-right: 17px;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    background: #F0F4FC;
+    border: 2px solid #323232;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+input:checked + label:before {
+    content: "v";
+}
+.checkbox-text{
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 400;
+    color: #323232;
+    cursor: pointer;
+}
+
+
+/* Восстановление пароля */
+.form-restore{
+    margin-top: 24px;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    color: #244C98;
+    cursor: pointer;
+}
+
+
+.form-enter{
+    margin-top: 36px;
+    height: 65px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #244C98;
+    cursor: pointer;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+.form-reg{
+    margin-top: 4px;
+    height: 65px;
+    width: 100%;
+    border: 1px solid #244C98;
+    border-radius: 4px;
+    background-color: #F0F4FC;
+    cursor: pointer;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 600;
+    color: #244C98;
+}
